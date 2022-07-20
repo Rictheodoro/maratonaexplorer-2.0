@@ -34,6 +34,35 @@
                         <img src="github-icon.png" alt="GitHub logo" class="logo"><p>GitHub</p></a>
                 </li>
             </ul>
+            
+            <script type="text/javascript">
+
+			// Função máquina de escrever
+			function typeWrite(elemento){
+			    const textoArray = elemento.innerHTML.split('');
+			    elemento.innerHTML = ' ';
+			    textoArray.forEach(function(letra, i){   
+			      
+			    setTimeout(function(){
+			        elemento.innerHTML += letra;
+			    }, 150 * i)
+
+			  });
+			}
+			const titulo = document.querySelector('.username');
+			typeWrite(titulo);
+
+
+			// Mudar tema
+
+			function mudarTema() {
+				var temas = ['light', 'dark', 'pink', 'dark-pink'];
+				var temaEscolhido = temas[Math.ceil(Math.random() * (temas.length - 1))];
+
+			    var element = document.body;
+			    element.classList.toggle(temaEscolhido);
+			}
+		</script>
             <footer>
                 <p>Feito com <span>&#x2764</span> por <a href="https://github.com/rictheodoro" target="_blank" rel="external" class="footer">rictheodoro</a></p>
             </footer>
